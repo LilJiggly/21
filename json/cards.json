@@ -1,0 +1,232 @@
+[
+  {
+    "op": "+",
+    "value": 1,
+    "type": "plus",
+    "category": "basic",
+    "display_name": "+1",
+    "description": "Adds 1 to your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "+",
+    "value": 2,
+    "type": "plus",
+    "category": "basic",
+    "display_name": "+2",
+    "description": "Adds 2 to your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "+",
+    "value": 3,
+    "type": "plus",
+    "category": "basic",
+    "display_name": "+3",
+    "description": "Adds 3 to your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "+",
+    "value": 4,
+    "type": "plus",
+    "category": "basic",
+    "display_name": "+4",
+    "description": "Adds 4 to your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "+",
+    "value": 5,
+    "type": "plus",
+    "category": "basic",
+    "display_name": "+5",
+    "description": "Adds 5 to your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "+",
+    "value": 6,
+    "type": "plus",
+    "category": "basic",
+    "display_name": "+6",
+    "description": "Adds 6 to your total.",
+    "weight_class": "uncommon"
+  },
+  {
+    "op": "+",
+    "value": 7,
+    "type": "plus",
+    "category": "basic",
+    "display_name": "+7",
+    "description": "Adds 7 to your total.",
+    "weight_class": "rare"
+  },
+  {
+    "op": "+",
+    "value": 21,
+    "type": "plus",
+    "category": "basic",
+    "display_name": "+21",
+    "description": "Adds 21 to your total.",
+    "weight_class": "ultra"
+  },
+
+  {
+    "op": "-",
+    "value": 1,
+    "type": "minus",
+    "category": "basic",
+    "display_name": "-1",
+    "description": "Subtract 1 from your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "-",
+    "value": 2,
+    "type": "minus",
+    "category": "basic",
+    "display_name": "-2",
+    "description": "Subtract 2 from your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "-",
+    "value": 3,
+    "type": "minus",
+    "category": "basic",
+    "display_name": "-3",
+    "description": "Subtract 3 from your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "-",
+    "value": 4,
+    "type": "minus",
+    "category": "basic",
+    "display_name": "-4",
+    "description": "Subtract 4 from your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "-",
+    "value": 5,
+    "type": "minus",
+    "category": "basic",
+    "display_name": "-5",
+    "description": "Subtract 5 from your total.",
+    "weight_class": "common"
+  },
+  {
+    "op": "-",
+    "value": 6,
+    "type": "minus",
+    "category": "basic",
+    "display_name": "-6",
+    "description": "Subtract 6 from your total.",
+    "weight_class": "uncommon"
+  },
+  {
+    "op": "-",
+    "value": 7,
+    "type": "minus",
+    "category": "basic",
+    "display_name": "-7",
+    "description": "Subtract 7 from your total.",
+    "weight_class": "rare"
+  },
+  {
+    "op": "-",
+    "value": 21,
+    "type": "minus",
+    "category": "basic",
+    "display_name": "-21",
+    "description": "Subtract 21 from your total.",
+    "weight_class": "ultra"
+  },
+
+  {
+    "op": "*",
+    "value": 2,
+    "type": "multiply",
+    "category": "basic",
+    "display_name": "2",
+    "description": "Multiplies your total by 2.",
+    "weight_class": "uncommon"
+  },
+  {
+    "op": "*",
+    "value": 3,
+    "type": "multiply",
+    "category": "basic",
+    "display_name": "3",
+    "description": "Multiplies your total by 3.",
+    "weight_class": "rare"
+  },
+  {
+    "op": "*",
+    "value": 7,
+    "type": "multiply",
+    "category": "basic",
+    "display_name": "7",
+    "description": "Multiplies your total by 7.",
+    "weight_class": "ultra"
+  },
+
+  {
+    "op": "/",
+    "value": 2,
+    "type": "divide",
+    "category": "basic",
+    "display_name": "2",
+    "description": "Divides your total by 2.",
+    "weight_class": "uncommon"
+  },
+  {
+    "op": "/",
+    "value": 3,
+    "type": "divide",
+    "category": "basic",
+    "display_name": "3",
+    "description": "Divides your total by 3.",
+    "weight_class": "rare"
+  },
+  {
+    "op": "/",
+    "value": 7,
+    "type": "divide",
+    "category": "basic",
+    "display_name": "7",
+    "description": "Divides your total by 7.",
+    "weight_class": "ultra"
+  },
+
+  {
+    "op": "random_plus",
+    "value": 5,
+    "type": "random",
+    "category": "random",
+    "display_name": "Random +",
+    "description": "Adds a random amount between 1 and 5.",
+    "weight_class": "uncommon"
+  },
+
+  {
+    "op": "random_minus",
+    "value": 5,
+    "type": "random",
+    "category": "random",
+    "display_name": "Random -",
+    "description": "Subtracts a random amount between 1 and 5.",
+    "weight_class": "uncommon"
+  },
+  {
+    "op": "perm_add",
+    "value": 2,
+    "type": "perm",
+    "category": "permanent",
+    "display_name": "Perm +2",
+    "description": "Adds +2 to every future + card.",
+    "weight_class": "rare"
+  }
+]
