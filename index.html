@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reach 21 Game</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div id="game-container">
+      <!-- Start Screen -->
+      <div id="start-screen" class="screen active">
+        <div class="intro">
+          <h1>Reach 21</h1>
+          <p>Try to reach exactly 21 in as few turns as possible.</p>
+        </div>
+        <div class="buttons">
+          <button id="start-btn">Start Game</button>
+          <button id="debug-btn">All Cards</button>
+        </div>
+      </div>
+
+      <!-- Game Screen -->
+      <div id="game-screen" class="screen">
+        <div class="intro">
+          <h2>Current Total: <span id="current-total">0</span></h2>
+          <p>Pick a card:</p>
+        </div>
+        <div id="cards"></div>
+        <p>Turns: <span id="turn-count">0</span></p>
+      </div>
+
+      <!-- End Screen -->
+      <div id="end-screen" class="screen">
+        <h1>You reached 21</h1>
+        <p>Total: <span id="final-total"></span></p>
+        <p>Total Turns: <span id="final-turns"></span></p>
+        <button id="restart-btn">Play Again</button>
+      </div>
+
+      <!-- Game Over Screen -->
+      <div id="gameover-screen" class="screen">
+        <h1>Game Over</h1>
+        <p>You went over 21!</p>
+        <p>Total: <span id="gameover-total"></span></p>
+        <button id="restart-btn-2">Try Again</button>
+      </div>
+
+      <!-- Debug Screen -->
+      <div id="debug-screen" class="screen">
+        <h2>Debug: Card Database</h2>
+        <button id="back-btn">Back</button>
+        <div id="debug-card-list"></div>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
