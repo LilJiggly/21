@@ -1,0 +1,278 @@
+:root {
+  --card-table-green: #00512c;
+  --card-table-light-green: #0a6b3d;
+  --coke-white: #f2f2f2;
+  --coke-white-vanilla: #fff8e7;
+  --black-jack-red: #b30000;
+  --black-jack-black: #1a1a1a;
+  --debug-color: #ff009d;
+}
+/* --- GLOBAL --- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Press Start 2P", Arial, sans-serif;
+  background: var(--card-table-green);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100dvh;
+  height: fit-content;
+  padding: 1rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4/3;
+  max-width: 856px;
+  padding: 2rem 2rem 3rem;
+  border: 0.25rem solid var(--coke-white);
+  border-radius: 1rem;
+  background: var(--card-table-light-green);
+}
+
+/* --- SCREENS --- */
+.screen {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  /* border: 0.2rem solid var(--coke-white); */
+  border: none;
+  background: #0078ff;
+  color: white;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#start-btn {
+  background: var(--black-jack-red);
+}
+
+#debug-btn {
+  background: var(--black-jack-black);
+}
+
+/* --- CARD AREA --- */
+#cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Card Flip Container */
+.card {
+  width: 100px;
+  height: auto;
+  perspective: 800px;
+  cursor: pointer;
+  aspect-ratio: 9/12;
+  color: var(--black-jack-black);
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-sub {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Inner card with 3D flip */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+/* Auto flip when card is created */
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.card-face {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+/* Back of the card (Pokémon style) */
+.card-back {
+  border: 3px solid #fff;
+  background-color: #fdf6f6;
+  opacity: 1;
+  background-image: linear-gradient(135deg, #f74545 25%, transparent 25%),
+    linear-gradient(225deg, #f74545 25%, transparent 25%),
+    linear-gradient(45deg, #f74545 25%, transparent 25%),
+    linear-gradient(315deg, #f74545 25%, #fdf6f6 25%);
+  background-position: 17px 0, 17px 0, 0 0, 0 0;
+  background-size: 17px 17px;
+  background-repeat: repeat;
+}
+
+/* Front of the card with operation value */
+.card-front {
+  background: var(--coke-white);
+  border: 3px solid var(--debug-color);
+  transform: rotateY(180deg);
+  box-shadow: 0.1rem 0.1rem 0.1rem var(--black-jack-black);
+}
+
+/* Colored borders & glow */
+.card-front.plus {
+  border-color: #4caf50;
+  border-color: var(--black-jack-red);
+}
+
+.card-front.minus {
+  border-color: #ff5252;
+  border-color: var(--black-jack-black);
+}
+
+.card-front.divide {
+  border-color: #ffeb3b;
+  border-color: var(--black-jack-black);
+}
+
+.card-front.multiply {
+  border-color: #00e5ff;
+  border-color: var(--black-jack-red);
+}
+
+.card-front.random {
+  border-color: #9c27b0;
+}
+
+.card-front.special {
+  border-color: #ff9800;
+}
+
+.card-front.permanent {
+  border-color: #00e676;
+}
+
+.card-front.legendary {
+  border-color: #ff4081;
+  box-shadow: 0 0 18px #ff4081aa;
+  animation: pulse 1.5s infinite alternate;
+}
+
+.bonus {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Text */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+#debug-card-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  /* grid-template-columns: repeat(7, 1fr); */
+  gap: 12px;
+}
+
+.debug-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #222;
+  border: 0.15rem solid #555;
+  color: white;
+}
+
+.debug-name {
+  font-weight: bold;
+}
+
+.debug-desc {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.debug-tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 6px;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
